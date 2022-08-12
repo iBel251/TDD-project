@@ -8,4 +8,12 @@ class Solver
     N * factorial(N -1)
   end
  end
+
+ def reverse word
+  word.reverse
+ end
+
+ def fizzbuzz N
+  
+ end
 end
