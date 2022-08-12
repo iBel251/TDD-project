@@ -17,8 +17,7 @@ describe 'Write unit tests for class Solver' do
     end
 
     it 'should raise an exception when N is a negative integer' do
-      result = @solver.factorial(-2)
-      expect(result).to match('No negative integer. This is an exception.')
+      expect{@solver.factorial(-2)}.to raise_error(RuntimeError, 'No negative integer. This is an exception.')
     end
   end
 
@@ -33,7 +32,7 @@ describe 'Write unit tests for class Solver' do
       expect(@solver.fizzbuzz(5)).to eq 'buzz'
     end
     it 'should return a number if the number is not divisible by 3 or 5' do
-      expect(@solver.fizzbuzz(7)).to eq 7
+      expect(@solver.fizzbuzz(7)).to eq "7"
     end
   end
 
